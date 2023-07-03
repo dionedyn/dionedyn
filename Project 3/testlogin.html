@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testing Login</title>
+    <style>
+        *{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+
+/* LOGIN PAGE CODE BEGINS */
+:root{
+    --light-white:#eee;
+    --deep-white:#fffff8;
+    --deep-black:#212031;
+    --light-black: #4d4a6b;
+    --skin-color: #b61f1f;
+}
+
+a{
+    text-decoration: none;
+    color: var(--deep-black);
+}
+
+
+.logincontainer{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 100vh;
+    background: var(--light-white);
+    padding: 50px;
+    background-color: blue;
+}
+
+
+.content p{
+    width: 100%;
+}
+
+
+.centerlize{
+    /* background:blue; */
+    display: grid;
+    place-items: center;
+    justify-content:center;
+    width: 100%;
+    margin: 0 !important;
+}
+
+.loginpage{
+    background: var(--deep-white);
+    color: var(--deep-black);
+    height:auto;
+    border-radius: 15px;
+    width:100%;
+    background: red ;
+    margin: auto !important;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    /* background-color: red; */
+    padding: 20px 10px;
+}
+
+.register{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+ .register p{
+    text-align:center;
+    border-radius: 5px;
+    border-bottom: 2.5px solid var(--light-white);
+    font-size: 20px;
+    width: fit-content;
+    display: flex;
+    padding: 5px 15px;
+    margin-bottom:10px ;
+    font-size: 23px;
+}
+
+.logo{
+    margin: 20px;
+    display: flex;
+}
+
+.logo img{
+    width: 70px;
+    position: relative;
+}
+
+.logo p{
+    display: inline;
+    font-size: 20px;
+    color: var(--skin-color);
+    word-spacing: -2px;
+    margin: auto;
+    margin-left: 5px;
+}
+
+.loginpage div{
+    margin:3px;
+    width: 100%;
+}
+
+.loginpage div label{
+    display: block;
+    padding-bottom: 3px;
+}
+
+.loginpage div input{
+    width: 100%;
+    height: 23px;
+    border: none;
+    border-bottom: 1px solid var(--deep-black);
+    padding: 0px 5px;
+    font-size:13px ;
+    outline:none;
+}
+
+.rememberpassword{
+    display: flex;
+    justify-content: left;
+    text-align:left !important;
+    margin: none;
+    padding:none;
+}
+
+.rememberpassword input {
+    width:auto !important;
+    margin-right:  5px;
+    text-align: left;
+}
+
+.rememberpassword p{
+  font-size: 15px;
+  text-align:left !important;
+}
+
+
+.checkboxcontent{
+    display: flex;
+    text-align:left !important;
+    justify-content: left;
+}
+
+.checkbox {
+    width:auto !important;
+    margin-right:  5px;
+}
+
+.checkboxcontent p{
+  font-size: 15px;
+}
+
+.submitBtn{
+    align-items: center;
+    justify-content: center;
+    display:flex;
+}
+
+.submit{
+    text-align: center;
+    border:none;
+    outline: none;
+    width: fit-content;
+    padding: 5px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    background: var(--light-white);
+    margin-top: 5px;
+}
+
+@media (max-width:950px) {
+
+    .loginsection{
+        display: block;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: auto;
+        background: var(--light-white);
+        padding: 10px;
+    }
+
+    .content{
+        flex: 0 0 100;
+        max-width: 100%;
+        margin: 10px;
+        padding:10px;
+        margin-right:25px;
+    }
+
+    .logincontainer{
+        flex: 1 1 100%;
+        padding: 30px;
+    }
+
+    .loginpage{
+        width: 100%;
+        padding:60px;
+    }
+
+    .centerlize{
+        width: 100%;
+    }
+
+    .logo p {
+        font-size: 25px;
+    }
+}
+
+@media (max-width:505px){
+    .loginsection{
+        display: block;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: auto;
+        background: var(--light-white);
+        padding: 0px;
+    }
+
+    .content{
+        flex: 0 0 100;
+        max-width: 100%;
+        margin: 10px;
+        padding:10px;
+        margin-right:25px;
+    }
+
+    .logincontainer{
+        flex: 1 1 100%;
+        padding: 30px;
+    }
+
+    .centerlize{
+        width: 100%;
+    }
+
+    .loginpage{
+        width: 100%;
+        padding:15px;
+    }
+
+    .logo{
+        margin: bottom 70px !important;;
+    }
+
+    .logo p{
+        font-size:20px !important;
+    }  
+
+}
+
+/* LOGIN PAGE CODE ENDS */
+
+    </style>
+</head>
+<body>
+    <div class="logincontainer" id="logincontainer">
+        <div class="form-box" >
+            <div class="button-box">
+                <div id="btn"></div>
+                <button type="button" onclick="login()" class="toggle-btn">Login</button>
+                <button type="button" onclick="register()" class="toggle-btn">Register</button>
+            </div>
+            <div class="loginpage">
+            <div class="centerlize">
+                <div class="register">
+                    <p>Sign Up</p>
+                </div>
+                <div class="logo">
+                    <img src="img/foursquarelogo(1).png" alt=""> <p>The Foursquare Gospel<br> Church In Nigeria</p>
+                </div>
+                <div>
+                    <label for="firstname">First Name</label>
+                    <input type="text" class="firstname">
+                </div>
+                <div>
+                    <label for="lastname">Last Name</label>
+                    <input type="text" class="lastname">
+                </div>
+                <div>
+                    <label for="axis">Axis</label>
+                    <input type="text" placeholder="eg. Agege Axis" class="axis">
+                </div>
+                <div>
+                    <label for="district">District</label>
+                    <input type="text" placeholder="eg. Baruwa District" class="district">
+                </div>
+                <div>
+                    <label for="zone">Zone</label>
+                    <input type="text" placeholder="eg. Akinogun Zone" class="zone">
+                </div>
+                <div>
+                    <label for="email">Email</label>
+                    <input type="email" placeholder="eg.foursquare@gmail.com" class="email">
+                </div>
+                <div>
+                    <label for="password">Password</label>
+                    <input type="password" class="password">
+                </div>
+                <div class="rememberpassword">
+                    <input type="checkbox"> <div><p>Remember Password</p></div>
+                </div>
+                <div class="submitBtn">
+                    <a href="index.html"><button type="submit" class="submit">Sign Up</button></a>
+                </div>      
+            </div>
+
+                <div class="loginpage">
+                    <div class="centerlize">
+                        <div class="register">
+                            <p>Sign Up</p>
+                        </div>
+                        <div class="logo">
+                            <img src="img/foursquarelogo(1).png" alt=""> <p>The Foursquare Gospel<br> Church In Nigeria</p>
+                        </div>
+                        <div>
+                            <label for="firstname">First Name</label>
+                            <input type="text" class="firstname">
+                        </div>
+                        <div>
+                            <label for="lastname">Last Name</label>
+                            <input type="text" class="lastname">
+                        </div>
+                        <div>
+                            <label for="axis">Axis</label>
+                            <input type="text" placeholder="eg. Agege Axis" class="axis">
+                        </div>
+                        <div>
+                            <label for="district">District</label>
+                            <input type="text" placeholder="eg. Baruwa District" class="district">
+                        </div>
+                        <div>
+                            <label for="zone">Zone</label>
+                            <input type="text" placeholder="eg. Akinogun Zone" class="zone">
+                        </div>
+                        <div>
+                            <label for="email">Email</label>
+                            <input type="email" placeholder="eg.foursquare@gmail.com" class="email">
+                        </div>
+                        <div>
+                            <label for="password">Password</label>
+                            <input type="password" class="password">
+                        </div>
+                        <div class="rememberpassword">
+                            <input type="checkbox"> <div><p>Remember Password</p></div>
+                        </div>
+                        <div class="submitBtn">
+                            <a href="index.html"><button type="submit" class="submit">Sign Up</button></a>
+                        </div>      
+        </div>
+</body>
+</html>
